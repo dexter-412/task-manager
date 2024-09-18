@@ -2,7 +2,7 @@ import type { QSelectOption } from 'quasar'
 import type { BoardColumn } from '~/application/types/app/boardColumn'
 import { StoreKey } from '~/application/types/app/store'
 import type { BoardCard, ChosenCard } from '~/application/types/app/boardCard'
-import equalObjectValues from '~/application/helpers/equalObjectValues'
+import isisEqualObjectValues from '~/application/helpers/isEqualObjectValues'
 import { MOCK_BOARD_DATA } from '~/application/api/constans'
 
 export const useBoardStore = defineStore(StoreKey.Board, () => {
@@ -63,7 +63,7 @@ export const useBoardStore = defineStore(StoreKey.Board, () => {
 
     delete chosenCard.value.columnStatusId
 
-    if (!equalObjectValues(chosenCard.value, originalCard)) {
+    if (!isEqualObjectValues(chosenCard.value, originalCard)) {
       Object.assign(originalCard, chosenCard.value)
     }
   }
