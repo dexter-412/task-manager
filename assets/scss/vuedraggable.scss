@@ -1,0 +1,19 @@
+.ghost-class {
+  max-height: 100px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px dashed var(--q-primary);
+
+  * {
+    opacity: 0;
+  }
+}
+
+.handle-drag {
+  cursor: move;
+}
+
+.fallback-class {
+  transform: rotate(10deg);
+  height: auto !important;
+}
