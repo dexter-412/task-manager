@@ -2,7 +2,7 @@ import type { QSelectOption } from 'quasar'
 import type { BoardColumn } from '~/application/types/app/boardColumn'
 import { StoreKey } from '~/application/types/app/store'
 import type { BoardCard, ChosenCard } from '~/application/types/app/boardCard'
-import isisEqualObjectValues from '~/application/helpers/isEqualObjectValues'
+import isEqualObjectValues from '~/application/helpers/isEqualObjectValues'
 import { MOCK_BOARD_DATA } from '~/application/api/constans'
 
 export const useBoardStore = defineStore(StoreKey.Board, () => {
