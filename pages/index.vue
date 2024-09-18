@@ -16,12 +16,5 @@ definePageMeta({
 const boardStore = useBoardStore()
 
 // Use useAsyncData for fetch from server
-const boardColumns = computed<BoardColumn[]>({
-  get () {
-    return boardStore.boardColumns
-  },
-  set (neVal) {
-    boardStore.updateBoardColumns(neVal)
-  }
-})
+const boardColumns = computed<BoardColumn[]>(() => boardStore.boardColumns)
 </script>
